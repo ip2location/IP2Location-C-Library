@@ -27,6 +27,7 @@ autoreconf -i -v --force
 export CFLAGS=-I/usr/include/malloc 
 ./configure
 make
+make install
 cd data
 perl ip-country.pl
 

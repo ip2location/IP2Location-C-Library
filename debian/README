@@ -24,7 +24,6 @@ perl ip-country.pl
 MacOS
 
 autoreconf -i -v --force
-export CFLAGS=-I/usr/include/malloc 
 ./configure
 make
 cd data

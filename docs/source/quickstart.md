@@ -55,7 +55,6 @@ sudo apt install ip2location
 
 ```
     autoreconf -i -v --force
-    export CFLAGS=-I/usr/include/malloc
     ./configure
     make
     make install

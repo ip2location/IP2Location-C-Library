@@ -14,12 +14,10 @@ case "$host" in
   # FreeBSD forgot to  install magic.h in a sane location. Bug or Feature?
   CPPFLAGS="$CPPFLAGS -I/usr/include -I/usr/src/contrib/file/"
   LDFLAGS="$LDFLAGS -L/usr/lib -R/usr/lib"
-  CFLAGS="$CFLAGS -lrt"
   ;;
 *-*-linux*)
   CPPFLAGS="$CPPFLAGS -D _GNU_SOURCE -I/usr/include -Wno-unused-result"
   LDFLAGS="$LDFLAGS"
-  CFLAGS="$CFLAGS -lrt"
   ;;
 *-*-darwin*)
   CPPFLAGS="$CPPFLAGS -I/opt/include"
@@ -35,6 +33,11 @@ AC_PROG_CXX
 AC_PROG_CC
 AC_PROG_MAKE_SET
 AC_PROG_LIBTOOL
+
+# Checks for libraries.
+# shm_open() lives in librt on Linux (glibc < 2.34) but in libc on the BSDs,
+# macOS, and newer glibc. Probe for it instead of hardcoding -lrt per host.
+AC_SEARCH_LIBS([shm_open], [rt])
 
 AC_CHECK_HEADERS([netinet/in.h stdlib.h string.h unistd.h])
 

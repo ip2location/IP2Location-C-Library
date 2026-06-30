@@ -27,7 +27,7 @@ download the BIN database at
 
 ```
 curl -LO https://github.com/ip2location/IP2Location-C-Library/releases/download/8.7.0/ip2location-8.7.0-amd64.deb
-sudo dpkg -i ip2location-8.7.0.deb
+sudo dpkg -i ip2location-8.7.0-amd64.deb
 ```
 
 

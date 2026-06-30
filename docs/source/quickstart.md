@@ -26,7 +26,7 @@ download the BIN database at
 ### Debian
 
 ```
-curl -LO https://github.com/chrislim2888/IP2Location-C-Library/releases/download/8.7.0/ip2location-8.7.0.deb
+curl -LO https://github.com/ip2location/IP2Location-C-Library/releases/download/8.7.0/ip2location-8.7.0.deb
 sudo dpkg -i ip2location-8.7.0.deb
 ```
 

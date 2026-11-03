@@ -26,8 +26,8 @@ download the BIN database at
 ### Debian
 
 ```
-curl -LO https://github.com/ip2location/IP2Location-C-Library/releases/download/8.7.0/ip2location-8.7.0-amd64.deb
-sudo dpkg -i ip2location-8.7.0-amd64.deb
+curl -LO https://github.com/ip2location/IP2Location-C-Library/releases/download/x.y.z/ip2location-x.y.z-amd64.deb
+sudo dpkg -i ip2location-x.y.z-amd64.deb
 ```
 
 
@@ -42,6 +42,16 @@ sudo apt install ip2location
 
 
 
+### Fedora/AlmaLinux
+
+Download the RPM package for your Fedora release from <https://pkgs.org/download/IP2Location>, then install it.
+
+```
+sudo dnf install ./IP2Location-*.rpm
+```
+
+
+
 ### Windows
 
 ```
@@ -50,6 +60,8 @@ sudo apt install ip2location
     cd data
     perl ip-country.pl
 ```
+
+
 
 ### MacOS
 
@@ -61,6 +73,8 @@ sudo apt install ip2location
     cd data
     perl ip-country.pl
 ```
+
+
 
 ## Testing
 
